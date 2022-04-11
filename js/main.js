@@ -35,6 +35,13 @@ class Deck {
             console.log(`${Deck[i].values} of ${Deck[i].suits}`)
         }
     }
+    createTableau(){
+        t = new Array(7);
+        for (var i=0; i < table.length; i++){
+            table[i] = new Array(19);
+        }
+        return table;
+    }
 }
 //game area
 //draw pile
@@ -61,3 +68,4 @@ table['hearts'] = hearts;
 table['spades'] = spades;
 table['clubs'] = clubs;
 table['tableau'] = t;
+

@@ -1,2 +1,162 @@
 body{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/background_2.png?raw=true);
+}
+.card #club1{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/club/1_club.png?raw=true);
+}
+.card #club2{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/club/2_club.png?raw=true);
+}
+.card #club3{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/club/3_club.png?raw=true);
+}
+.card #club4{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/club/4_club.png?raw=true);
+}
+.card #club5{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/club/5_club.png?raw=true);
+}
+.card #club6{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/club/6_club.png?raw=true);
+}
+.card #club7{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/club/7_club.png?raw=true);
+}
+.card #club8{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/club/8_club.png?raw=true);
+}
+.card #club9{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/club/9_club.png?raw=true);
+}
+.card #club10{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/club/10_club.png?raw=true);
+}
+.card #club11{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/club/11_club.png?raw=true);
+}
+.card #club12{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/club/12_club.png?raw=true);
+}
+.card #club13{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/club/13_club.png?raw=true);
+}
+
+.card #spade1{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/spade/1_spade.png?raw=true);
+}
+.card #spade2{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/spade/2_spade.png?raw=true);
+}
+.card #spade3{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/spade/3_spade.png?raw=true);
+}
+.card #spade4{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/spade/4_spade.png?raw=true);
+}
+.card #spade5{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/spade/5_spade.png?raw=true);
+}
+.card #spade6{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/spade/6_spade.png?raw=true);
+}
+.card #spade7{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/spade/7_spade.png?raw=true);
+}
+.card #spade8{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/spade/8_spade.png?raw=true);
+}
+.card #spade9{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/spade/9_spade.png?raw=true);
+}
+.card #spade10{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/spade/10_spade.png?raw=true);
+}
+.card #spade11{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/spade/11_spade.png?raw=true);
+}
+.card #spade12{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/spade/12_spade.png?raw=true);
+}
+.card #spade13{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/spade/13_spade.png?raw=true);
+}
+
+.card #heart1{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/heart/1_heart.png?raw=true);
+}
+.card #heart2{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/heart/2_heart.png?raw=true);
+}
+.card #heart3{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/heart/3_heart.png?raw=true);
+}
+.card #heart4{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/heart/4_heart.png?raw=true);
+}
+.card #heart5{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/heart/5_heart.png?raw=true);
+}
+.card #heart6{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/heart/6_heart.png?raw=true);
+}
+.card #heart7{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/heart/7_heart.png?raw=true);
+}
+.card #heart8{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/heart/8_heart.png?raw=true);
+}
+.card #heart9{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/heart/9_heart.png?raw=true);
+}
+.card #heart10{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/heart/10_heart.png?raw=true);
+}
+.card #heart11{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/heart/11_heart.png?raw=true);
+}
+.card #heart12{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/heart/12_heart.png?raw=true);
+}
+.card #heart13{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/heart/13_heart.png?raw=true);
+}
+
+.card #diamond1{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/diamond/1_diamond.png?raw=true);
+}
+.card #diamond2{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/diamond/2_diamond.png?raw=true);
+}
+.card #diamond3{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/diamond/3_diamond.png?raw=true);
+}
+.card #diamond4{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/diamond/4_diamond.png?raw=true);
+}
+.card #diamond5{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/diamond/5_diamond.png?raw=true);
+}
+.card #diamond6{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/diamond/6_diamond.png?raw=true);
+}
+.card #diamond7{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/diamond/7_diamond.png?raw=true);
+}
+.card #diamond8{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/diamond/8_diamond.png?raw=true);
+}
+.card #diamond9{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/diamond/9_diamond.png?raw=true);
+}
+.card #diamond10{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/diamond/10_diamond.png?raw=true);
+}
+.card #diamond11{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/diamond/11_diamond.png?raw=true);
+}
+.card #diamond12{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/diamond/12_diamond.png?raw=true);
+}
+.card #diamond13{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/diamond/13_diamond.png?raw=true);
 }

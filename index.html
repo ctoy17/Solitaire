@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
     <link rel="stylesheet" href="css/main.css"> 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script defer src="js/main.js"></script>
@@ -17,12 +18,12 @@
                 <div id="draw">draw</div>
                 <div id="waste">waste</div>
             </div>
-            <div class="aces">
-                <div id="ace1">hearts</div>
-                <div id="ace2">diamonds</div>
-                <div id="ace3">spades</div>
-                <div id="ace4">clubs</div>
-            </div>
+            <ul class="aces">
+                <li id="ace1" data-empty="true">hearts</li>
+                <li id="ace2" data-empty="true">diamonds</li>
+                <li id="ace3" data-empty="true">spades</li>
+                <li id="ace4" data-empty="true">clubs</li>
+            </ul>
             <div class="settings">
                 <ul>SETTINGS
                     <li>Sound Effects</li>
@@ -30,15 +31,15 @@
                 </ul>
 
             </div>
-            <div class="tableau">
-                <div id="stack1">t1</div>
-                <div id="stack2">t2</div>
-                <div id="stack3">t3</div>
-                <div id="stack4">t4</div>
-                <div id="stack5">t5</div>
-                <div id="stack6">t6</div>
-                <div id="stack7">t7</div>
-            </div>
+            <ul class="tableau">
+                <li id="stack1"><ul></ul>t1</li>
+                <li id="stack2"><ul></ul>t2</li>
+                <li id="stack3"><ul></ul>t3</li>
+                <li id="stack4"><ul></ul>t4</li>
+                <li id="stack5"><ul></ul>t5</li>
+                <li id="stack6"><ul></ul>t6</li>
+                <li id="stack7"><ul></ul>t7</li>
+            </ul>
         </div>    
     </div>
         

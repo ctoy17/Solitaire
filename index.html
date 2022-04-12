@@ -11,38 +11,31 @@
     <title>SOLITAIRE</title>
 </head>
 <body>
-    <div class="gameScreen">
+    <div id="gameScreen">
         <div id = "table">
-            <div class = "stock">
-                <div id="draw">draw</div>
-                <div id="waste">waste</div>
-            </div>
-            <ul class="aces">
-                <li id="ace1" data-empty="true">hearts</li>
-                <li id="ace2" data-empty="true">diamonds</li>
-                <li id="ace3" data-empty="true">spades</li>
-                <li id="ace4" data-empty="true">clubs</li>
-            </ul>
-            <div class="settings">
-                <ul>SETTINGS
-                    <li>Sound Effects</li>
-                    <li>Restart</li>
-                </ul>
-
+            <div class = "topBar">
+                <div id="draw" class="card large back-red shadow"></div>
+                <div id="waste" class="card large outline"></div>
+                <div id="ace1" class="card large outline"></div>
+                <div id="ace2" class="card large outline"></div>
+                <div id="ace3" class="card large outline"></div>
+                <div id="ace4" class="card large outline"></div>
             </div>
             <ul class="tableau">
-                <li id="stack1"><ul></ul>t1</li>
-                <li id="stack2"><ul></ul>t2</li>
-                <li id="stack3"><ul></ul>t3</li>
-                <li id="stack4"><ul></ul>t4</li>
-                <li id="stack5"><ul></ul>t5</li>
-                <li id="stack6"><ul></ul>t6</li>
-                <li id="stack7"><ul></ul>t7</li>
+                <li id="stack1" class="card large outline"><ul></ul></li>
+                <li id="stack2" class="card large outline"><ul></ul></li>
+                <li id="stack3" class="card large outline"><ul></ul></li>
+                <li id="stack4" class="card large outline"><ul></ul></li>
+                <li id="stack5" class="card large outline"><ul></ul></li>
+                <li id="stack6" class="card large outline"><ul></ul></li>
+                <li id="stack7" class="card large outline"><ul></ul></li>
             </ul>
         </div>    
     </div>
         
         
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
+
+

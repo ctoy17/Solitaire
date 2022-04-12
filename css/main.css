@@ -1,6 +1,59 @@
 body{
     background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/background_2.png?raw=true);
 }
+#table{
+    display: grid;
+    grid-template: "sidebar header header" "sidebar main main" auto;
+}
+.topBar{
+    grid-area: header;
+}
+.topBar div:nth-last-child(-n+4){
+    float: right;
+    margin-right: 40px;
+}
+.tableau{
+    grid-area: main;
+}
+.card {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 5px 5px 50px 5px;
+    cursor: pointer;
+    font-size: inherit;
+    width: 4.0em;
+    height: 5.5em;
+    background-color: rgb(238, 189, 210);
+    border-radius: 0.20em;
+    border: 1px solid #efd6d6;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.card.small {
+    font-size: 12px; 
+}
+.card.large {
+    font-size: 26px; 
+}
+.card.xlarge {
+    font-size: 42px; 
+}
+.card.no-border {
+    border: 0; 
+}
+.card.shadow {
+    box-shadow: 2px 2px 3px 0 rgba(41, 41, 41, 0.75); 
+}
+.card.outline {
+    background-image: none;
+    background-color: rgba(218, 226, 191, 0.5);
+    border: 0.15em dashed #d89ebf; 
+}
+
 .card #club1{
     background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/club/1_club.png?raw=true);
 }
@@ -159,4 +212,10 @@ body{
 }
 .card #diamond13{
     background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/diamond/13_diamond.png?raw=true);
+}
+.card #cardBackBlue{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/main/assets/card%20back/cardBackBlue.png?raw=true);
+}
+.card #cardBackGreen{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/main/assets/card%20back/cardBackGreen.png?raw=true);
 }

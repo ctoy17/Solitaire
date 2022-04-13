@@ -1,19 +1,65 @@
+*{
+    box-sizing: border-box; 
+    padding: 10px;
+}
 body{
     background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/background_2.png?raw=true);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin: 0 auto;
 }
-#table{
-    display: grid;
-    grid-template: "sidebar header header" "sidebar main main" auto;
+.game{
+    display: grid; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "topRow"
+    "tableau";
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80vw;
 }
-.topBar{
-    grid-area: header;
+.game > div::after {
+    content: "";
+    clear: both;
+    display: table;
 }
-.topBar div:nth-last-child(-n+4){
-    float: right;
-    margin-right: 40px;
+.topRow{
+    display: grid; 
+    grid-template-columns: auto auto auto auto; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    padding: 10px;
+    grid-template-areas: 
+    ". stock logo aces"; 
+    grid-area: topRow; 
 }
-.tableau{
-    grid-area: main;
+.stock{
+    grid-template-areas: "draw waste";
+    grid-area: stock;
+}
+#draw { 
+    grid-area: draw;  
+}
+#waste{
+    grid-area: waste;
+}
+#logo { 
+    grid-area: logo; 
+}
+ul#aces.ace { 
+    grid-area: aces; 
+}
+.game>.tableau{
+    display: grid; 
+    grid-area: tableau;
+    grid-template-columns: auto auto;
+    grid-template-areas: ". stacks";
+}
+ul#stack.stacks{
+    grid-area: stacks;
 }
 .card {
     box-sizing: border-box;

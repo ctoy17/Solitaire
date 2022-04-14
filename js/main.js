@@ -3,19 +3,18 @@ const suits = ["s", "d", "c", "h"];
 const values = ["A", "02", "03", "04", "05", "06", "07", "08", "09", "10", "J", "Q", "K"];
 
 let deck;
-let card;
 let draw;
 let waste;
 let aces;
-let tableau;
 let clickedCard;
+let firstStackId;
 
 const gameBoard = {draw: document.getElementById('draw'),
 waste: document.getElementById('waste'),
-ace1: document.getElementById('hearts'),
-ace2: document.getElementById('diamonds'),
-ace3: document.getElementById('spades'),
-ace4: document.getElementById('clubs'),
+ace1: document.getElementById('ace1'),
+ace2: document.getElementById('ace2'),
+ace3: document.getElementById('ace3'),
+ace4: document.getElementById('ace4'),
 stack1: document.getElementById('stack1'),
 stack2: document.getElementById('stack2'),
 stack3: document.getElementById('stack3'),
@@ -24,14 +23,15 @@ stack5: document.getElementById('stack5'),
 stack6: document.getElementById('stack6'),
 stack7: document.getElementById('stack7')}
 
+
+
 document.querySelector('body').addEventListener('click', handleClick);
 
 
 init();
 function init(){
     deck = [];
-    card = [];
-    cardArr=
+    cardArr=[];
     draw = [];
     waste = [];
     aces = [[], [], [], []];
@@ -48,21 +48,20 @@ function render(){
     wastePile();
     acePile();
     tableauStack();
-    gameWon();
 }
 function tableauStack(){
     let numCards;
     let cardBack;
-    stacks.forEach((tableau, ind) => {
+    stacks.forEach((stack, ind) => {
         numCards = 0;
         cardBack = 0;
-        tableau.forEach((card, indCard) =>{
+        stack.forEach((card, indCard) =>{
             let cardEle = document.createElement('div');
             cardEle.className = `card back ${card.suit}${card.value}`
             let faceUp = stackUp[ind];
             while(faceUp > 0){
-                if(indCard === tableau.length - faceUp){
-                    cardEle.className = cardEle.className.replace('  back','');
+                if(indCard === stack.length - faceUp){
+                    cardEle.className = cardEle.className.replace(' back','');
                 }
                 faceUp--;
             }
@@ -79,7 +78,7 @@ function tableauStack(){
             }
             gameBoard[`stack${ind +1}`].appendChild(cardEle);
         })
-    });
+    })
 }
 function drawPile(){
     draw.forEach((card, indCard) => {
@@ -222,7 +221,7 @@ function checkForLegalMove(clickDest) {
             if(getCardValue(topCardObj) === getCardValue(cardObj) -1) {
                 if(!clickedCard) {
                     moveTopCard(stacks[stackIdx], aces[aceIdx]);
-                    stacksFaceUp[stackIdx]--;
+                    stackUp[stackIdx]--;
                     clickedCard = null;
                     while(cardArr.length > 0) {
                         cardArr.pop();
@@ -247,7 +246,7 @@ function checkForLegalMove(clickDest) {
             
             if(!clickedCard) {
                 moveTopCard(stacks[stackIdx], aces[aceIdx]);
-                stacksFaceUp[stackIdx]--;
+                stackUp[stackIdx]--;
                 clickedCard = null;
                 while(cardArr.length > 0) {
                     cardArr.pop();
@@ -334,7 +333,7 @@ function handleStackClick(element) {
             while(cardArr.length > 0) {
                 stacks[stackId].push(cardArr.pop());
                 stackUp[stackId]++;
-            }
+            }clickedCard = null;
             render();
         }
 
@@ -343,13 +342,12 @@ function handleStackClick(element) {
         while(cardArr.length > 0) {
             stacks[stackId].push(cardArr.pop());
             stackUp[stackId]++;
-        }
+        }clickedCard = null;
         render();
     } 
 } 
 
 function handleAceClick(element) {
-
     let aceId = getClickDestination(element).replace('ace', '') -1;
     let clickDest = getClickDestination(element);
     let topCard = aces[aceId][aces[aceId].length -1];
@@ -486,13 +484,12 @@ function getCardValue(cardObj) {
         break;
         case 'K': return 13;
         break;
-        default: console.log('getCardValue is broken')
     }
 }
 
-function getPositionInStack(HTMLCollection) {
-    for(let i = 0; i < HTMLCollection.length; i++) {
-        if(HTMLCollection[i].className.includes('highlight')) {
+function getPositionInStack(stackPos) {
+    for(let i = 0; i < stackPos.length; i++) {
+        if(stackPos[i].className.includes('highlight')) {
             return i;
         }
     }
@@ -503,13 +500,13 @@ function isFaceUpCard(element) {
     return (element.className.includes('card') && !(element.className.includes('back')) && !(element.className.includes('outline'))) 
 }
 
-function isAcePile(element) {
-    if (!(element.firstChild)) {
-        return element.id.includes('ace');
-    } else {
-        return element.parentNode.id.includes('ace');
-    }
-}
+// function isAcePile(element) {
+//     if (!(element.firstChild)) {
+//         return element.id.includes('ace');
+//     } else {
+//         return element.parentNode.id.includes('ace');
+//     }
+// }
 
 function getClickDestination(element) {
     if (element.id) {
@@ -520,7 +517,7 @@ function getClickDestination(element) {
     }
 }
 
-function winGame() {
+function youWon() {
     aces.forEach(arr => {
         
         for(let i = 0; i < 13; i++) {

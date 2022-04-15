@@ -5,6 +5,7 @@ let deck;
 let draw;
 let waste;
 let aces;
+let stack;
 let clickedCard;
 let firstStackId;
 let winner;

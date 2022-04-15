@@ -11,6 +11,7 @@ h1{
     flex-direction: column;
     align-items: center;
     width: 400px;
+    font-size: 64px;
 }
 h1 div#win{
     color:antiquewhite;
@@ -84,5 +85,5 @@ div#stack.stack{
     background-color: antiquewhite;
     width: fit-content;
     margin-top: 60px;
-    font-size: 18px;
+    font-size: 32px;
 }

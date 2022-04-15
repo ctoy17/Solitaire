@@ -16,6 +16,8 @@
 - [ ] Add different card backgrounds and themes to choose from
 - [ ] Add game winning animation
 - [ ] Add game timer
+- [ ] Add drag and drop function
+- [ ] Add auto-complete
 
 
 BUILT USING:

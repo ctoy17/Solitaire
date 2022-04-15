@@ -1,3 +1,4 @@
+//constants for card deck and plays
 const suits = ["s", "d", "c", "h"];
 const values = ["A", "02", "03", "04", "05", "06", "07", "08", "09", "10", "J", "Q", "K"];
 
@@ -10,6 +11,7 @@ let clickedCard;
 let firstStackId;
 let winner;
 
+//playing area of board
 const gameBoard = {draw: document.getElementById('draw'),
 waste: document.getElementById('waste'),
 ace1: document.getElementById('ace1'),
@@ -27,6 +29,8 @@ stack7: document.getElementById('stack7')}
 window.addEventListener('DOMContentLoaded', (e) => {
 document.querySelector('body').addEventListener('click', handleClick);
 
+
+//initiate game 
 init();
 function init(){
     deck = [];
@@ -53,6 +57,7 @@ function render(){
         document.getElementById('win').textContent = 'You Win!';
     }
 }
+//set up bottom row of cards, 1-7
 function tableauStack(){
     let numCards;
     let cardBack;
@@ -145,6 +150,7 @@ function resetGame(){
         }
     }
 }
+//when cards are clicked
 function handleClick(e) {
     let clickDest = getClickDestination(e.target);
     if (clickDest.includes('stack')) {
@@ -164,8 +170,6 @@ function handleStackClick(element) {
     let clickDest = getClickDestination(element);
     let topCard = stacks[stackId][stacks[stackId].length -1];
     let stackPos;
-
-    // select and highlight card to move
     if (!clickedCard && isFaceUpCard(element)) {
         firstStackId = stackId;
         firstClickDest = clickDest;
@@ -178,16 +182,10 @@ function handleStackClick(element) {
             stackUp[stackId]--;
             cardsToPush++;
         }
-
-    // flip over unflipped card in stack
     } else if (!clickedCard && element === element.parentNode.lastChild) {
         stackUp[stackId]++;
         render();
-
-    // move card to stack destination
     } else if (clickedCard && isFaceUpCard(element)) {
-
-        // allow clicks on first clicked card
         if (stackId === firstStackId && clickDest === firstClickDest) {
             while(cardArr.length > 0) {
                 stacks[stackId].push(cardArr.pop());
@@ -195,8 +193,6 @@ function handleStackClick(element) {
             }
             clickedCard = null;
             render();
-
-        // push card to stack if play is legal
         } else if(allowMove(clickedCard, topCard)){
             while(cardArr.length > 0) {
                 stacks[stackId].push(cardArr.pop());
@@ -204,8 +200,6 @@ function handleStackClick(element) {
             }clickedCard = null;
             render();
         }
-
-    // move card to empty stack destination
     } else if (clickedCard && isEmptyStack(element) && getCardValue(clickedCard) === 13) {
         while(cardArr.length > 0) {
             stacks[stackId].push(cardArr.pop());
@@ -220,7 +214,6 @@ function handleAceClick(element) {
     let clickDest = getClickDestination(element);
     let topCard = aces[aceId][aces[aceId].length -1];
 
-    // if a face up card hasn't been clicked yet, select and highlight this one
     if(!clickedCard && isFaceUpCard(element)){
         firstStackId = aceId;
         firstClickDest = clickDest;
@@ -233,7 +226,6 @@ function handleAceClick(element) {
             cardsToPush++;
         }
 
-    // if the highlighted card is an ace, put it in the empty ace pile
     } else if (clickedCard) {
         if(!topCard) {
             if(getCardValue(clickedCard) === 1) {
@@ -244,7 +236,6 @@ function handleAceClick(element) {
                 render();
             }
 
-        // if the highlighted card is 1 higher and of the same suit, play it on the ace
         } else {
             if (getCardValue(clickedCard) === getCardValue(topCard) + 1 && clickedCard.suit === topCard.suit) {
                 while(cardArr.length > 0) {
@@ -262,7 +253,6 @@ function handleWasteClick(element) {
     let topCard = waste[waste.length -1];
     let topCardEl = gameBoard.waste.lastChild;
 
-    // if there is no highlighted card, and the draw pile isn't an empty stack, select the top card
     if(!clickedCard && !isEmptyStack(element)){
         topCardEl.className += ' highlight';
         clickedCard = topCard;
@@ -273,8 +263,6 @@ function handleWasteClick(element) {
             cardArr.push(waste.pop());
             cardsToPush++;
         }
-
-    // if the highlighted card is from the draw pile, put it back in the pile (deselect it)
     } else if (!isEmptyStack(element) && topCardEl.className.includes('highlight') && getClickDestination(element) === 'waste') {
         while(cardArr.length > 0) {
             waste.push(cardArr.pop());
@@ -286,11 +274,11 @@ function handleWasteClick(element) {
 
 function handleDrawClick () {
     if(!clickedCard) {
-        // if there are cards in the 'pile', flip one into the 'draw'
+        // if there are cards in the draw stack flip and add to waste
         if(draw.length > 0) {
             waste.push(draw.pop());
             render();
-        // if the pile is empty, recycle the 'draw' into the 'pile' and subtract points    
+        // when draw is empty, restart with waste    
         } else {
             while(waste.length > 0) {
                 draw.push(waste.pop())
@@ -299,11 +287,10 @@ function handleDrawClick () {
         }
     }
 }
-
+//validates moves; if stack is empty, only kings are allowed. colors must alternate, and aces must go in order by suit
 function isEmptyStack(element) {
     return !!element.id;
 }
-
 function allowMove(card1, card2) {
     
     let card1Color = getCardColor(card1);

@@ -7,7 +7,7 @@
 
 
 ### OBJECT:
->Builf foundation pile, from ace through king, for each suit.
+>Build foundation pile, from ace through king, for each suit.
 ### RULES:
 >In the tableau piles, cards must alternate by color and be in squence. If there is an open space in one of the 7 slots, only a king is able to move there.
 

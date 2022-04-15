@@ -6,7 +6,7 @@ let deck;
 let draw;
 let waste;
 let aces;
-let stack;
+let stacks;
 let clickedCard;
 let firstStackId;
 let winner;
@@ -41,7 +41,6 @@ function init(){
     stacks = [[],[],[],[],[],[],[]];
     stackUp=[1,1,1,1,1,1,1];
     clickedCard=null;
-    winner=null;
     newDeck();
     shuffleDeck();
     dealGame();
@@ -53,7 +52,7 @@ function render(){
     wastePile();
     acePile();
     tableauStack();
-    if(checkWin()) {
+    if(checkWin()=== true) {
         document.getElementById('win').textContent = 'You Win!';
     }
 }
@@ -362,9 +361,9 @@ function getClickDestination(element) {
 }
 function checkWin(){
     if (gameBoard.ace1.length + gameBoard.ace2.length + gameBoard.ace3.length + gameBoard.ace4.length === 52){
-        return true;
+        return winner;
         } else {
             return false;
-        }
-}
+            }
+}render();
 })

@@ -7,6 +7,7 @@ let waste;
 let aces;
 let clickedCard;
 let firstStackId;
+let winner;
 
 const gameBoard = {draw: document.getElementById('draw'),
 waste: document.getElementById('waste'),
@@ -35,6 +36,7 @@ function init(){
     stacks = [[],[],[],[],[],[],[]];
     stackUp=[1,1,1,1,1,1,1];
     clickedCard=null;
+    winner=null;
     newDeck();
     shuffleDeck();
     dealGame();
@@ -46,7 +48,9 @@ function render(){
     wastePile();
     acePile();
     tableauStack();
-    checkWin();
+    if(checkWin()) {
+        document.getElementById('win').textContent = 'You Win!';
+    }
 }
 function tableauStack(){
     let numCards;
@@ -370,7 +374,9 @@ function getClickDestination(element) {
 }
 function checkWin(){
     if (gameBoard.ace1.length + gameBoard.ace2.length + gameBoard.ace3.length + gameBoard.ace4.length === 52){
-        document.querySelector('h1').textContent = 'You Win!';
-        }else return false;
+        return true;
+        } else {
+            return false;
+        }
 }
 })

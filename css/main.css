@@ -7,6 +7,9 @@ h1{
     text-align: center;
     border: 1px solid;
 }
+#win{
+    color:black;
+}
 body{
     background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/background_2.png?raw=true);
     background-repeat: no-repeat;
@@ -17,12 +20,12 @@ body{
 }
 #table {
     display: grid; 
-    grid-template-rows: 1fr 1fr; 
+    grid-template-rows: 1fr 2fr; 
     gap: 0px 0px; 
     grid-template-areas: 
     "topRow"
     "tableau";
-    margin-top: 50px;
+    margin-top: 0;
     margin-left: auto;
     margin-right: auto;
     max-width: 80vw;
@@ -64,6 +67,7 @@ body{
     grid-template-columns: auto auto;
     grid-template-areas: ". stacks";
     margin-top: 0px;
+    grid-template-rows: 2fr;
 }
 div#stack.stack{
     grid-area: stacks;

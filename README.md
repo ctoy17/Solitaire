@@ -2,7 +2,8 @@
 
 ## Play here: https://ctoy-solitaire.netlify.app
 
-
+![Imgur](https://i.imgur.com/z7K1dBQ.png)
+![Imgur](https://i.imgur.com/hWzEs8W.png)
 ![Imgur](https://i.imgur.com/PgvCWwr.jpg)
 
 
